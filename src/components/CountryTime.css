@@ -3,7 +3,7 @@
     border: 1px solid #393939;
     border-radius: 10px;
     width: 400px;
-    padding: 15px;
+    padding: 20px;
     /* height: 400px; */
     color: white;
     display: flex;
@@ -25,4 +25,11 @@
 
 .country_time_date .date{
     margin: 0px;
+}
+
+@media (max-width: 450px){
+    .country_time_date{
+        width: 80%;
+
+    }
 }

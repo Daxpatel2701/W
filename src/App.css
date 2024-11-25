@@ -1,48 +1,103 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #0B0A0A;
+}
+
 .App {
   text-align: center;
   background: url("../public/rain-dark-sun-clouds 1.png");
-  /* background-size: cover; */
   height: 600px;
   margin: 20px;
   border-radius: 20px;
 }
 
-.App .search_can{
+.App .search_can {
   padding-top: 60px;
   display: flex;
   flex-direction: column;
   gap: 25px;
 }
 
-.App .disc{
+.App .disc {
   color: white;
-  font-size: 70px;
-  margin: 0px 300px;
+  font-size: 60px; 
+  margin: 0 300px;
+  text-align: center;
 }
 
-.App .search{
-  /* margin-top: 25px; */
+.App .search {
   display: flex;
   justify-content: center;
 }
 
-.App .search input{
+.App .search input {
   padding: 10px;
   width: 300px;
   border: none;
   border-radius: 10px 0 0 10px;
 }
 
-.App .search button{
+.App .search button {
   padding: 10px;
   border: none;
   border-radius: 0 10px 10px 0;
-  cursor: pointer;
   background: white;
 }
 
-.bottom-data{
+.bottom-data {
   display: flex;
   justify-content: center;
   gap: 40px;
+  flex-wrap: wrap; 
+  margin: 20px 0px;
+}
+
+/* Media Queries */
+
+@media (max-width: 1100px) {
+  .App {
+    height: auto; 
+    margin: 0px;
+    padding: 0px;
+  }
+
+  .App .disc {
+    font-size: 35px; 
+    margin: 0 100px;
+  }
+
+  .App .search input {
+    width: 30%; 
+  }
+
+  .bottom-data {
+    gap: 20px; 
+  }
+}
+
+
+@media (max-width: 450px) {
+.App{
+  width: 100%;
+}
+
+  .App .disc {
+    font-size: 28px; 
+    margin: 0 5px;
+  }
+
+  .App .search input {
+    width: 70%; 
+    font-size: 14px;
+  }
+
+  .App .search button {
+    padding: 8px;
+  }
+
+  .bottom-data {
+    flex-direction: column; 
+    align-items: center; 
+  }
 }

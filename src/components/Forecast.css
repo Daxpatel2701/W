@@ -15,3 +15,10 @@
 .forecast h2{
     font-size: 30px;
 }
+
+@media (max-width: 450px){
+    .forecast{
+        width: 80%;
+        margin: auto;
+    }
+}
