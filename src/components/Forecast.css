@@ -16,6 +16,11 @@
     font-size: 30px;
 }
 
+img{
+    width: 52px;
+    height: 52px;
+}
+
 @media (max-width: 450px){
     .forecast{
         width: 80%;

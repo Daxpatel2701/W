@@ -1,15 +1,26 @@
 import './WeatherCard.css';
 
-function WeatherCard() {
-    return (
-        <div class="weather-card">
-    <div class="weather-icon">
-      ☁️
+function WeatherCard({ temperature, cityName, iconCode }) {
+  // Convert Kelvin to Celsius
+  const celsius = (temperature - 273.15).toFixed(1);
+
+  return (
+    <div className="weather-card">
+      <div className="weather-icon">
+        {/* Render the weather icon dynamically */}
+        {iconCode ? (
+          <img
+            src={`http://openweathermap.org/img/wn/${iconCode}@2x.png`}
+            alt="Weather Icon"
+          />
+        ) : (
+          "☁️" // Fallback icon
+        )}
+      </div>
+      <div className="temperature">{celsius}°C</div>
+      <div className="location">{cityName}</div>
     </div>
-    <div class="temperature">26°C</div>
-    <div class="location">New York, USA.</div>
-  </div>
-    );
+  );
 }
 
 export default WeatherCard;
