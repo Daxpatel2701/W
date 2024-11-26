@@ -54,6 +54,14 @@ body {
   margin: 20px 0px;
 }
 
+.loading{
+  color: white; 
+  display: flex; 
+  justify-content: center; 
+  align-items: center; 
+  height: 100vh; 
+}
+
 /* Media Queries */
 
 @media (max-width: 1100px) {
