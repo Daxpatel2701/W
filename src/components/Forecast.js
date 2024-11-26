@@ -13,7 +13,7 @@ function Forecast({ last5DayData }) {
 
   return (
     <div className='forecast'>
-      <h2>5 Day Forecast:</h2>
+      <h2>5 Days Forecast:</h2>
       <div className='forecast_5day_data'>
         {dailyForecasts.map((forecast, index) => {
           const date = new Date(forecast.dt * 1000);
