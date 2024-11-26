@@ -16,7 +16,7 @@ function App() {
   const [pressure, setPressure] = useState(null);
   const [windSpeed, setWindSpeed] = useState(null);
   const [seaLevel, setSeaLevel] = useState(null);
-  const [iconCode, setIconCode] = useState(null); // New state for icon
+  const [iconCode, setIconCode] = useState(null); 
   const [last5DayData, setLast5DayData] = useState(null);
   const [searchQuery, setSearchQuery] = useState('');
 
@@ -37,7 +37,7 @@ function App() {
       setPressure(currentWeatherResponse.data.main.pressure);
       setWindSpeed(currentWeatherResponse.data.wind.speed);
       setSeaLevel(currentWeatherResponse.data.main.sea_level);
-      setIconCode(currentWeatherResponse.data.weather[0].icon); // Extract weather icon code
+      setIconCode(currentWeatherResponse.data.weather[0].icon); 
 
       // Fetch 5-day forecast
       const forecastResponse = await axios.get(forecastWeatherUrl);
@@ -59,7 +59,7 @@ function App() {
 
       if (response.data.length > 0) {
         const { lat, lon } = response.data[0];
-        fetchWeatherData(lat, lon); // Fetch weather data after fetching coordinates
+        fetchWeatherData(lat, lon); 
       } else {
         console.error("City not found.");
         setLoading(false);

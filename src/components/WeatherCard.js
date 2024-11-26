@@ -7,14 +7,13 @@ function WeatherCard({ temperature, cityName, iconCode }) {
   return (
     <div className="weather-card">
       <div className="weather-icon">
-        {/* Render the weather icon dynamically */}
         {iconCode ? (
           <img
             src={`http://openweathermap.org/img/wn/${iconCode}@2x.png`}
             alt="Weather Icon"
           />
         ) : (
-          "☁️" // Fallback icon
+          "☁️"
         )}
       </div>
       <div className="temperature">{celsius}°C</div>
